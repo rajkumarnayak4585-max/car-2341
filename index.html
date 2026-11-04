@@ -1,0 +1,17 @@
+git clone --branch v1.0.0 https://github.com/amirmushichge/veyra-interactive-car.git
+
+cd veyra-interactive-car
+
+git switch -c my-veyra
+
+corepack prepare pnpm@10.15.1 --activate
+
+pnpm install --frozen-lockfile
+
+pnpm test
+
+pnpm verify:reference
+
+pnpm build
+
+pnpm dev
